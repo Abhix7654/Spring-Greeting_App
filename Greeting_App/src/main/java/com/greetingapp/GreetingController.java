@@ -43,4 +43,8 @@ public class GreetingController {
     public Greeting updateGreeting(@PathVariable Long id, @RequestBody Greeting updatedGreeting) {
         return greetingService.updateGreeting(id, updatedGreeting);
     }
+    @DeleteMapping("/delete/{id}")
+    public String deleteGreeting(@PathVariable Long id) {
+        return greetingService.deleteGreeting(id);
+    }
 }
